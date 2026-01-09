@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://dna8x58u2rv8x"]
+
+[ext_resource type="Theme" uid="uid://dlhi05bked7ry" path="res://main_theme.tres" id="1_lbgm6"]
+[ext_resource type="Script" uid="uid://33i2b3gpuy5u" path="res://clicker.gd" id="2_gyk0w"]
+[ext_resource type="Script" uid="uid://ne4j8o4yk454" path="res://company_data.gd" id="3_sqexo"]
+
+[sub_resource type="Resource" id="Resource_w7k6m"]
+script = ExtResource("3_sqexo")
+metadata/_custom_type_script = "uid://ne4j8o4yk454"
+
+[node name="Clicker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lbgm6")
+script = ExtResource("2_gyk0w")
+company_data = SubResource("Resource_w7k6m")
+
+[node name="IncreaseFactorTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+autostart = true
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="CompanyCapitalLabel" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Company capital, $"
+
+[node name="CompanyCapital" type="Label" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+text = "10000"
+
+[node name="GamesMadePerClickLabel" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Games made per click"
+
+[node name="GamesMadePerClick" type="Label" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+
+[node name="HireNewDeveloperButton" type="Button" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Hire new developer"
+
+[node name="MakeAndSellGameButton" type="Button" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Make & sell the game"
+
+[node name="GamesMadeAndSoldLabel" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Games made and sold"
+
+[node name="GamesMadeAndSold" type="Label" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="DevelopersHiredCountLabel" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Developers hired"
+
+[node name="DevelopersHiredCount" type="Label" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"

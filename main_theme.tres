@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dlhi05bked7ry"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsqoc"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[resource]
+Button/font_sizes/font_size = 44
+Button/styles/normal = SubResource("StyleBoxFlat_gsqoc")
+GridContainer/constants/h_separation = 20
+GridContainer/constants/v_separation = 20
+Label/font_sizes/font_size = 42
