@@ -24,14 +24,12 @@ func make_and_sell_game() -> void:
 func hire_new_developer() -> void:
 	company_data.game_delevelopers_count += 1
 	company_data.company_capital_usd -= company_data.game_deleveloper_price_usd
-	var tween := create_tween()
-
 	_display_company_data()
 
 func increase_factor() -> void:
 	if company_data.game_delevelopers_count == 0:
 		return
-	company_data.games_per_click_count *= company_data.game_delevelopers_count * company_data.games_made_per_click_increase_factor_per_deleloper
+	company_data.games_per_click_count += company_data.game_delevelopers_count * company_data.games_made_per_click_increase_factor_per_deleloper
 	_display_company_data()
 
 var games_made_per_click_increase_interval_seconds
